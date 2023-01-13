@@ -46,4 +46,10 @@ class SampleTest extends TestCase
         $actual = Sample::sample4(100);
         $this->assertEquals(100, $actual);;
     }
+
+    public function testSample5()
+    {
+        $actual = Sample::sample5(1);
+        $this->assertEquals(1, $actual);;
+    }
 }
