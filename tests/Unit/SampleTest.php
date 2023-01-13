@@ -15,12 +15,18 @@ class SampleTest extends TestCase
     {
         $actual = Sample::sample2(3, 4);
         $this->assertTrue($actual);;
+
+        $actual = Sample::sample2(0, 4);
+        $this->assertFalse($actual);;
     }
 
     public function testSample3()
     {
         $actual = Sample::sample3(100, 100);
         $this->assertTrue($actual);;
+
+        $actual = Sample::sample3(1, 1);
+        $this->assertFalse($actual);;
     }
 
     public function testSample4()
