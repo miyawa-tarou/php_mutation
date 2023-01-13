@@ -31,4 +31,12 @@ class Sample {
         }
         return $a;
     }
+
+    public static function sample5(int $a): int
+    {
+        if ($a > 10) {
+            $a **= 3;
+        }
+        return $a;
+    }
 }
