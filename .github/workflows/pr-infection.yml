@@ -16,10 +16,9 @@ jobs:
           extension-csv: xdebug
       - name: Install Dependencies
         run: composer install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
-      - name: Run Infection for modified line only
+      - name: Run Infection threshold 80%
         run: |
-          git fetch --depth=1 origin $GITHUB_BASE_REF
-          vendor/bin/infection --min-msi 80 --git-diff-lines --git-diff-base=origin/$GITHUB_BASE_REF --logger-github --ignore-msi-with-no-mutations --only-covered
+          vendor/bin/infection --min-msi=80 --ignore-msi-with-no-mutations
       - name: Cat Test Result
         run: |
           cat ./tmp/infection.log
