@@ -19,6 +19,3 @@ jobs:
       - name: Run Infection threshold 80%
         run: |
           vendor/bin/infection --min-msi=80 --ignore-msi-with-no-mutations
-      - name: Cat Test Result
-        run: |
-          cat ./tmp/infection.log
